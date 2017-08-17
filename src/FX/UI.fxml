@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Editor.EditorController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+          <Menu text="File">
+              <MenuItem text="New" onAction="#onNew"/>
+              <MenuItem text="Open" onAction="#onOpen"/>
+              <MenuItem text="Save" onAction="#onSave"/>
+              <MenuItem text="Close Tab" onAction="#onCloseTab"/>
+              <MenuItem text="Exit" onAction="#onExit"/>
+          </Menu>
+          <Menu text="Format">
+              <MenuItem text="Bold" onAction="#onBold"/>
+              <MenuItem text="Italic" onAction="#onItalic"/>
+          </Menu>
+          <Menu text="Edit">
+              <MenuItem text="Cut" onAction="#onCut"/>
+              <MenuItem text="Copy" onAction="#onCopy"/>
+              <MenuItem text="Paste" onAction="#onPaste"/>
+          </Menu>
+
+      </MenuBar>
+   </top>
+
+   <bottom>
+      <HBox prefHeight="61.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+
+    <center>
+        <TabPane fx:id="tabPane" layoutX="14.0" layoutY="105.0" BorderPane.alignment="CENTER"
+                 prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        </TabPane>
+   </center>
+</BorderPane>
